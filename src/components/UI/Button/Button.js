@@ -2,9 +2,9 @@ import classes from './Button.module.css';
 
 import React from 'react';
 
-function Button({ children, clicked, btnType }) {
+function Button({ children, clicked, btnType, disabled }) {
     return (
-        <button className={[classes.Button, classes[btnType]].join(' ')} onClick={clicked}>{children}</button>
+        <button disabled={disabled} className={[classes.Button, classes[btnType]].join(' ')} onClick={clicked}>{children}</button>
     );
 }
 
